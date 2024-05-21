@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <Div>
+        <h1> Hello World</h1>
+    </Div>
+    <script type="text/javascript">
+
+// Створення класу TV
+class TV {
+  constructor() {
+    this.currentChannel = 1; // Встановлення початкового каналу
+  }
+
+  // Метод для переходу до наступного каналу
+  nextChannel() {
+    this.currentChannel++;
+  }
+
+  // Метод для переходу до попереднього каналу
+  previousChannel() {
+    if (this.currentChannel > 1) {
+      this.currentChannel--;
+    }
+  }
+
+  // Метод для встановлення каналу за номером
+  setChannel(number) {
+    if (number > 0) {
+      this.currentChannel = number;
+    }
+  }
+}
+
+// Створення нового об'єкта TV
+const tv = new TV();
+
+// Приклад використання
+console.log("Поточний канал:", tv.currentChannel); // Поточний канал: 1
+tv.nextChannel(); // Перехід до наступного каналу
+console.log("Поточний канал після nextChannel:", tv.currentChannel); // Поточний канал після nextChannel: 2
+tv.setChannel(5); // Встановлення каналу 5
+console.log("Поточний канал після setChannel:", tv.currentChannel); // Поточний канал після setChannel: 5
+tv.previousChannel(); // Перехід до попереднього каналу
+console.log("Поточний канал після previousChannel:", tv.currentChannel); // Поточний канал після previousChannel: 4
+
+        </script>
+</body>
+</html>
